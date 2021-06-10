@@ -1,0 +1,27 @@
+{
+  "name": "silk-codec",
+  "version": "0.0.1",
+  "description": "silk codec: encoding pcm to silk, decoding silk to pcm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JarvisChu/silk-codec.git"
+  },
+  "keywords": [
+    "silk"
+  ],
+  "author": "JarvisChu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JarvisChu/silk-codec/issues"
+  },
+  "homepage": "https://github.com/JarvisChu/silk-codec#readme",
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "node-addon-api": "^3.2.1",
+    "node-gyp": "^8.1.0"
+  }
+}
