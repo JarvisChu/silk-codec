@@ -15,14 +15,10 @@ function testEncoder(pcmFile, silkFile)
 
     // write silk file header
     var header = Buffer.from("#!SILK_V3")
-    fs.writeFile(silkFile, header, function (err) {
-        if (err) throw err;
-    });
+    fs.writeFileSync(silkFile, header);
     
     // write silk data
-    fs.appendFile(silkFile, silk_data, function (err) {
-        if (err) throw err;
-    });
+    fs.appendFileSync(silkFile, silk_data);
 }
 
 function testDecoder(silkFile, pcmFile)
@@ -43,9 +39,7 @@ function testDecoder(silkFile, pcmFile)
     pcm_data = decoder.decode(sub.buffer);
 
     // write to pcm file
-    fs.writeFile(pcmFile, pcm_data, function (err) {
-        if (err) throw err;
-    });
+    fs.writeFileSync(pcmFile, pcm_data);
 }
 
 testEncoder("8000_16bit_1channel.pcm", "silk_out.silk")

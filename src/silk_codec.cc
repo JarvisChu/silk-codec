@@ -277,7 +277,7 @@ Napi::Value SilkCodec::Decode(const Napi::CallbackInfo& info)
 
         if(silk_in.size() < size_t(pkg_size + 2)){
             std::cout<<"["<<tid<<"]SilkCodec::Decode"
-                     <<", remain not enough, "
+                     <<", remain not enough"
                      <<", remain: " << silk_in.size() - 2
                      <<", pkg_size: " << pkg_size
                      <<std::endl;
